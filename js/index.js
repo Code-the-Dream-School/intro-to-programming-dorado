@@ -8,12 +8,13 @@ let footer = document.querySelector("footer");
 
 let copyright = document.createElement("p");
 
-document.getElementById('copyright').innerHTML = thisYear, " Scott Feichter";
-
-document.getElementById("copyright").style.color = "white";
-
+copyright.id = "copyright";
 
 footer.appendChild(copyright);
+
+document.getElementById('copyright').innerHTML = `Copyright ${thisYear} Scott Feichter`;
+
+document.getElementById("copyright").style.color = "white";
 
 let skills = ["Honest", "Dependable", "Energenic"];
 
@@ -24,5 +25,5 @@ let skillsList = skillsSection.querySelector('ul');
 for (let i = 0; i < skills.length; i++) {
   let skill = document.createElement("li");
   skill.innerHTML = skills[i];
-  skillsList.appendChild(skill); 
+  skillsList.appendChild(skill);
 }
