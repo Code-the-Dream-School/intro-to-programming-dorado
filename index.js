@@ -1,1 +1,2 @@
-const name = "Mary Alice Kent"
+const name = "Mary Alice Moore"
+var age = 35
