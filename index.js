@@ -1,1 +1,1 @@
-const name = "Mary Alice Moore"
+const name = "Mary Alice Kent"
