@@ -12,8 +12,8 @@ const skills = ["HTML", "CSS", "JavaScript", "Cooking"];
  const skillSection = document.getElementById("skills"); // Do I need this line?
 const skillsList = skillSection.querySelector("ul");
     for(let i = 0; i < skills.length; i++) {
-    const skill = document.createElement("li");
-    skill.innerText = skills[i];
-    skillsList.appendChild(skill);
+        const skill = document.createElement("li");
+        skill.innerText = skills[i];
+        skillsList.appendChild(skill);
 }
 console.log(skillsList);
