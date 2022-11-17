@@ -10,7 +10,7 @@ footer.appendChild(copyright);
 const skills = ["HTML", "CSS", "JavaScript", "Cooking"];
 // console.log(skills);
  const skillSection = document.getElementById("skills"); // Do I need this line?
-const skillsList = document.querySelector("ul");
+const skillsList = skillSection.querySelector("ul");
     for(let i = 0; i < skills.length; i++) {
     const skill = document.createElement("li");
     skill.innerText = skills[i];
