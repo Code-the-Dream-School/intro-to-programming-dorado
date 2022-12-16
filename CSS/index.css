@@ -1,0 +1,126 @@
+body {
+   color:rgb(43, 2, 53);
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 20px;
+   margin: 10px;
+   padding: auto;
+   animation: myanimation 15s infinite;
+  }
+
+  @keyframes myanimation {
+    0% {background-color: rgb(251, 242, 255);}
+    20%{background-color:rgb(246, 232, 254);}
+    40%{background-color:rgb(217, 203, 227);}
+    60%{background-color:rgb(219, 216, 221);}
+    80% {background-color: rgb(248, 245, 252);}
+    100% {background-color: rgb(251, 242, 255);}
+  }
+
+  section {
+    margin: 20px;
+    padding: 20px;
+  }
+
+h1 {
+color:rgb(53, 5, 126);
+font-size: 50px;
+font-weight: bold;
+  }
+
+h2 {
+color:rgb(48, 48, 51);
+font-size: 40px;
+font-weight: bold;
+  }
+
+h3 {
+color:rgb(79, 79, 81);
+font-size: 30px;
+font-weight: bold;
+  }
+
+.experience {
+    background-color: rgb(248, 245, 252) !important;
+    list-style-type: circle;
+    width: 1000px;
+    height: auto;
+}
+
+#skills ul {
+    background-color: rgb(248, 245, 252) !important;
+    list-style-type: circle; 
+    width: 1000px;
+    height: auto;
+}
+
+
+label {
+font-size: 25px !important;
+color: rgb(38, 4, 138);
+font-size: 20px;
+}
+
+input, textarea {
+    color: rgb(0, 0, 0);
+    background-color: rgb(251, 248, 252) !important;
+font-size: 20px;
+border-style: solid;
+border-color: rgb(35, 35, 35);
+border-width: 2px;
+padding: 5px;
+margin: 20px;
+}
+textarea {
+    width: 300px;
+    height: 100px;
+}
+label {
+    margin: 20px;
+    padding: 20px;
+}
+form button{
+    background-color: rgb(206, 205, 210) !important;
+    color: rgb(38, 4, 138);
+    font-size: 18px;
+    text-align: center;
+    width: 80px;
+    height: 40px;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#messages ul {
+    font-size: 20px;
+    background-color: rgb(248, 245, 252) !important;
+    width: 700px;
+    height: auto;
+    list-style-type: square;
+}
+#messages button {
+    background-color: rgb(206, 205, 210) !important;
+    border-radius: 5px;
+    color: rgb(38, 4, 138);
+    font-size: 12px;
+    text-align: center;
+    width: 50px;
+    height: 35px;
+    border-width: 1px;
+    padding: 3px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: rgb(206, 205, 210);
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      font-size: 50px !important;
+    }
+}
