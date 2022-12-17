@@ -1,0 +1,104 @@
+body {
+  background-color: #02b3e4;
+  color: #fff;
+  font-family: "Times New Roman", sans-serif;
+  margin: 20px;
+  padding: 30px;
+}
+#container {
+  padding-top: 80px;
+  padding-bottom: 20px;
+  margin-top: -40px;
+}
+.header {
+  background-color: #334257;
+  padding: 8px;
+  margin: -8px 0px 10px 2px;
+
+  position: fixed;
+  width: 100%;
+  border-bottom: 2px solid yellow;
+}
+.header ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.header ul li {
+  list-style: none;
+}
+.header ul li a {
+  padding: 10px;
+  margin: 20px 0px 10px 0px;
+}
+.header ul li a:hover {
+  background-color: rgb(240, 175, 10);
+  border-radius: 8px;
+}
+.header ul li a {
+  color: white;
+  text-decoration: none !important;
+  font-weight: 800;
+  font-size: larger;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 2.25;
+}
+p {
+  font-size: 20px;
+}
+p a {
+  text-decoration: none;
+  font-size: larger;
+  color: rgba(0, 0, 0, 0.735);
+  margin: 5px;
+  padding: 2px;
+}
+p a:hover {
+  background-color: yellow;
+  border-radius: 10px;
+  color: #1884e9;
+  padding: 3px;
+  font-weight: 800;
+  transform: scale(1.2);
+}
+ul li {
+  list-style: none;
+  font-size: large;
+  list-style: square;
+}
+form {
+  margin: 0 10px;
+  width: 400px;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+}
+label {
+  color: #000;
+  font-size: 18px;
+}
+button {
+  font-size: large;
+  background-color: antiquewhite;
+  border-radius: 0.45em;
+}
+button:hover {
+  background-color: purple;
+  color: white;
+}
+textarea {
+  background-color: #fff;
+}
+
+footer {
+  background-color: #334257;
+  padding: 5px;
+}
+footer:hover {
+  background-color: purple;
+}
