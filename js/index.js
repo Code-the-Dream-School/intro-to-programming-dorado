@@ -19,7 +19,7 @@ for (let i = 0; i < skills.length; i++) {
 //fill the #messages section
 let messageSection = document.getElementById('messages');
 //Hide the #messages section when the list is empty
-messageSection.style.display = "none";
+messageSection.style.display = 'none';
 //Handle message form submit
 const messageForm = document.querySelector("[name='leave_message']")
 messageForm.addEventListener('submit', function(event){
@@ -47,7 +47,7 @@ entry.remove();
 });
 newMessage.appendChild(removeButton);
 messageList.appendChild(newMessage);
-messageSection.style.display = "block";
+messageSection.style.display = 'block';
 messageForm.reset();
 }, 
 false)
