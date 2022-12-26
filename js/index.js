@@ -2,10 +2,10 @@ const today = new Date();
 const thisYear = today.getFullYear();
 const footer = document.querySelector("footer");
 const copyright = document.createElement("p");
-let mName = "Abebe";
+let mName = "Abebe Tesso";
 copyright.innerHTML = `&#169; ${mName} ${thisYear}`;
 footer.appendChild(copyright);
-const skills = ["HTML", "CSS", "JavaScript", "Cooking"];
+const skills = ["HTML", "CSS", "JavaScript"];
 const skillSection = document.getElementById("skills");
 const skillsList = skillSection.querySelector("ul");
 for (let i = 0; i < skills.length; i++) {
@@ -24,8 +24,8 @@ messageForm.addEventListener("submit", (e) => {
   const messageSection = document.getElementById("messages");
   const messageList = messageSection.querySelector("ul");
   const newMessage = document.createElement("li");
-  newMessage.innerHTML = `<a href="mailto:abetesso@gmial.com">
-      ${name}</a> <span>Wrote: ${message}</span>`;
+  newMessage.innerHTML = `${name}<a href="mailto":${email}
+      </a> <span>Wrote: ${message}</span>`;
   const removeButton = document.createElement("button");
   removeButton.innerText = "remove";
   removeButton.type = "button";
