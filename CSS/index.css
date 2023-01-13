@@ -1,84 +1,152 @@
+/* * {
+    border: 1px red solid;
+} */
 body {
-   color:rgb(43, 2, 53);
-   font-family: Arial, Helvetica, sans-serif;
-   font-size: 20px;
-   margin: 10px;
-   padding: auto;
-   animation: myanimation 15s infinite;
-  }
+    color: rgb(43, 2, 53);
+    font-family: Arial Helvetica sans-serif;
+    font-size: 20px;
+    margin: 10px;
+    padding: auto;
+    animation: myanimation 15s infinite;
+}
 
-  @keyframes myanimation {
-    0% {background-color: rgb(251, 242, 255);}
-    20%{background-color:rgb(246, 232, 254);}
-    40%{background-color:rgb(217, 203, 227);}
-    60%{background-color:rgb(219, 216, 221);}
-    80% {background-color: rgb(248, 245, 252);}
-    100% {background-color: rgb(251, 242, 255);}
-  }
+@keyframes myanimation {
+    0% {
+        background-color: rgb(251, 242, 255);
+    }
 
-  section {
+    20% {
+        background-color: rgb(246, 232, 254);
+    }
+
+    40% {
+        background-color: rgb(217, 203, 227);
+    }
+
+    60% {
+        background-color: rgb(219, 216, 221);
+    }
+
+    80% {
+        background-color: rgb(248, 245, 252);
+    }
+
+    100% {
+        background-color: rgb(251, 242, 255);
+    }
+}
+nav {
+    font-size: 25px;
+    position: fixed;
+    right: 0;
+ 
+}
+nav a {
+    color: rgb(81, 80, 81);
+}
+nav a:hover {
+   color: rgb(94, 19, 94);
+}
+
+section {
     margin: 20px;
     padding: 20px;
-  }
+}
 
 h1 {
-color:rgb(53, 5, 126);
-font-size: 50px;
-font-weight: bold;
-  }
+    color: rgb(53, 5, 126);
+    font-size: 50px;
+    font-weight: bold;
+}
 
 h2 {
-color:rgb(48, 48, 51);
-font-size: 40px;
-font-weight: bold;
-  }
+    color: rgb(48, 48, 51);
+    font-size: 40px;
+    font-weight: bold;
+}
 
 h3 {
-color:rgb(79, 79, 81);
-font-size: 30px;
-font-weight: bold;
-  }
+    color: rgb(79, 79, 81);
+    font-size: 30px;
+    font-weight: bold;
+}
 
-.experience {
+.experience{
+    width: 1000px;
+    height: auto;
+    display: flex;
+}
+
+.experience li {
+    background-color: rgb(248, 245, 252) !important;
+    border: 0.5px solid rgb(128, 128, 128);
+    margin: 10px;
+    padding: 20px;
+    list-style-type: none;
+}
+#skills ul {
+    width: 400px;
+    height: auto;
+    
+}
+#skills li {
     background-color: rgb(248, 245, 252) !important;
     list-style-type: circle;
-    width: 1000px;
-    height: auto;
+    margin: 2px;
+    padding: 2px;
 }
+.container {
+    
+    display: grid;
+    grid-template-columns: 400px 400px;
+    gap: 10px;
+    grid-auto-rows: 3;
+  }
 
-#skills ul {
-    background-color: rgb(248, 245, 252) !important;
-    list-style-type: circle; 
-    width: 1000px;
-    height: auto;
-}
-
+  .name {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .email {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .message {
+    grid-column: 1/2;
+    grid-row: 2;
+  }
+  .button {
+    grid-column: 1;
+    grid-row: 3; 
+  }
 
 label {
-font-size: 25px !important;
-color: rgb(38, 4, 138);
-font-size: 20px;
+    font-size: 25px !important;
+    color: rgb(38, 4, 138);
+    font-size: 20px;
 }
 
-input, textarea {
+input,
+textarea {
     color: rgb(0, 0, 0);
     background-color: rgb(251, 248, 252) !important;
-font-size: 20px;
-border-style: solid;
-border-color: rgb(35, 35, 35);
-border-width: 2px;
-padding: 5px;
-margin: 20px;
+    font-size: 20px;
+    border: 2 px rgb(35, 35, 35) solid;
+    padding: 5px;
+    margin: 20px;
 }
+
 textarea {
-    width: 300px;
-    height: 100px;
+    width: 400px;
+    height: 150px;
 }
+
 label {
     margin: 20px;
     padding: 20px;
 }
-form button{
+
+form button {
     background-color: rgb(206, 205, 210) !important;
     color: rgb(38, 4, 138);
     font-size: 18px;
@@ -92,6 +160,7 @@ form button{
     cursor: pointer;
 }
 
+
 #messages ul {
     font-size: 20px;
     background-color: rgb(248, 245, 252) !important;
@@ -99,6 +168,7 @@ form button{
     height: auto;
     list-style-type: square;
 }
+
 #messages button {
     background-color: rgb(206, 205, 210) !important;
     border-radius: 5px;
@@ -108,6 +178,7 @@ form button{
     width: 50px;
     height: 35px;
     border-width: 1px;
+    border-radius: 5px;
     padding: 3px;
     margin: 5px;
     cursor: pointer;
@@ -121,6 +192,6 @@ footer {
 
 @media only screen and (max-width: 600px) {
     body {
-      font-size: 50px !important;
+        font-size: 50px !important;
     }
 }
