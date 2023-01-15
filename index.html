@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="UX, UI, User Experience, User Interface, Information Architecture" http-equiv="refresh" content="30>
 <meta name="Rachel Westermann" content="HTML, CSS, JavaScript"></head>
-
 </head>
 <body>
 <h1>Rachel Westermann</h1>
@@ -14,33 +13,75 @@ I took my first Information Architecture class in 2009 but it was my last course
 
 <h1>Experience</h1>
 <p>I worked as a school librarian for five years in two states helping so many wonderful students. I was a coach for Academic Team and Future Problem Solvers. I then moved abroad and received my CELTA certification to teach English as a Second Language to Adults through Cambridge. Upon coming back to the US I taught refugees, scholars, wives, and others looking to improve their English. I then remembered the other half of my Master's degree and that Information Architecture class. I also thought about being the only woman in my Intro. to Programming class in 2003. I was accepted into Code the Dream and have been working to learn multiple coding languages. I am also working toward my Professional Diploma in UX Design.</p>
-</body></html>
+
+<script type="text/javascript" src="js/index.js"></script>
+
+</body>
+<section id="skills">
+  <h2>Skills</h2>
+
+  <ul role="list">
+    <!-- HTML will be inserted here via JS -->
+  </ul>
+</section>
 <h1>Connect</h1>
 LinkedIn GitHub
 <footer>
-    <section>
-        <h2>Leave a Message</h2>
-        <form>
-            <label for="name">Enter your name: </label>
-            <input type="text" name="name" id="name" required>
-          </div>
-          <div class="form-example">
-            <label for="email">Enter your email: </label>
-            <input type="email" name="email" id="email" required>
-          </div>
-          <br>
-            <textarea rows="4" cols="50" name="comment" form="usrform">
-            Leave a message here...</textarea>
-          <div class="form-example">
-            <input type="submit" value="Submit!">
-        </form>        
-    </section>
-</footer>
-</html>
+  <section id="contact">
+    <h2>Leave a Message</h2>
+
+    <form name="leave_message">
+      <div class="field field--inline">
+        <label class="field__label" for="lm_name">Name</label>
+        <input
+          class="field__input"
+          id="lm_name"
+          type="text"
+          name="name"
+          required
+        />
+      </div>
+
+      <div class="field field--inline">
+        <label class="field__label" for="lm_email">Email Address</label>
+        <input
+          class="field__input"
+          id="lm_email"
+          type="email"
+          name="email"
+          required
+        />
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="lm_message">Message</label>
+        <textarea
+          class="field__input"
+          id="lm_message"
+          name="message"
+          required
+        ></textarea>
+      </div>
+
+      <button class="button" type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section id="messages" style="display: none">
+    <h2>Messages</h2>
+
+    <ul class="list" role="list">
+      <!-- HTML will be inserted here via JS -->
+    </ul>
+  </section>
+</div>
+
 
       
     </div>
   </form>
 
 
+</footer>
+</html>
 
