@@ -59,6 +59,7 @@ h2,
 h3 {
   padding-top: 50px;
   line-height: 2.25;
+  color: rgb(240, 175, 10);
 }
 p {
   font-size: 20px;
@@ -106,8 +107,16 @@ strong,
 .strong {
   font-weight: 500;
 }
-
+.reach a {
+  color: white;
+  font-size: 1em;
+  line-height: 2;
+}
 form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
   margin: 10px;
   width: 400px;
   padding: 1em;
@@ -115,20 +124,27 @@ form {
   border-radius: 1em;
 }
 label {
-  color: #000;
+  color: white;
   font-size: 18px;
 }
-button {
-  font-size: large;
-  background-color: antiquewhite;
-  border-radius: 0.45em;
+input,
+textarea {
+  background-color: #fff;
 }
+button {
+  color: #fff;
+  font-size: large;
+  background-color: #00008b;
+  padding: 5px;
+}
+a span {
+  color: burlywood;
+  font-size: 1em;
+}
+
 button:hover {
   background-color: purple;
   color: white;
-}
-textarea {
-  background-color: #fff;
 }
 
 footer {
@@ -152,6 +168,7 @@ footer:hover {
   body,
   .header {
     background-color: gray;
+    color: #fff;
   }
 }
 
