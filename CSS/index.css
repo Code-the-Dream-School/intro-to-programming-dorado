@@ -84,12 +84,12 @@ h3 {
     padding: 20px;
     list-style-type: none;
 }
-#skills ul {
-    width: 400px;
+#skills ul, #projects ul {
+    width: 450px;
     height: auto;
     
 }
-#skills li {
+#skills li, #projects li {
     background-color: rgb(248, 245, 252) !important;
     list-style-type: circle;
     margin: 2px;
