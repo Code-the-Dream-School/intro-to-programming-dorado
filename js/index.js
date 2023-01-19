@@ -3,7 +3,7 @@ const today = new Date();
 const thisYear = today.getFullYear();
 const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
-copyright.innerHTML = 'Anna Pestova ' + thisYear;
+copyright.innerHTML = '© Anna Pestova ' + thisYear;
 footer.appendChild(copyright)
 //create list of skills 
 let skills = ['Computer proficiency', 'Communication skills', 'Problem-solving abilities', 'Organizational know-how'];
@@ -51,4 +51,25 @@ messageSection.style.display = 'block';
 messageForm.reset();
 }, 
 false)
+
+var githubRequest = new XMLHttpRequest();
+var repositories=[];
+
+githubRequest.open('GET', 'https://api.github.com/users/AnnaPestova1/repos');
+githubRequest.send();
+githubRequest.addEventListener('load', function(){
+   repositories = JSON.parse(this.response); 
+    console.log(repositories)
+   
+let projectSection = document.getElementById('projects');
+
+let projectList = projectSection.querySelector('ul');
+
+for (let l=0; l<repositories.length; l++) {
+    var project = document.createElement('li');
+    project.innerHTML = `<a href="${repositories[l].html_url}">${repositories[l].name}</a><span> Updated year: ${new Date(repositories[l].updated_at).getFullYear()}</span>`;
+    projectList.appendChild(project);
+}
+}
+)
 
