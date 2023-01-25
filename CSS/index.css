@@ -3,7 +3,7 @@
 } */
 body {
     color: rgb(43, 2, 53);
-    font-family: Arial Helvetica sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     margin: 10px;
     padding: auto;
@@ -35,18 +35,63 @@ body {
         background-color: rgb(251, 242, 255);
     }
 }
+
+header {
+    margin-top: 30px;
+    padding: 20px;
+}
+
+#myName {
+    font-size: 50px;
+}
+
 nav {
+    background-color: rgba(0, 0, 0, .03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .03);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
     font-size: 25px;
+    align-items: center;
+    top: 0;
+    margin: 10px;
+    padding: 10px;
+    margin-top: 0;
+    padding-top: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
     position: fixed;
     right: 0;
- 
+    justify-content: flex-end;
+
 }
+
 nav a {
     color: rgb(81, 80, 81);
+    padding: 15px;
+    color: rgb(81, 80, 81);
 }
+
 nav a:hover {
-   color: rgb(94, 19, 94);
+    color: rgb(94, 19, 94);
+    text-decoration: none;
 }
+
+nav a:link {
+    text-decoration: none;
+}
+
+
+nav a:visited {
+    text-decoration: none;
+}
+
+
+nav a:active {
+    text-decoration: none;
+}
+
+
 
 section {
     margin: 20px;
@@ -67,58 +112,66 @@ h2 {
 
 h3 {
     color: rgb(79, 79, 81);
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
 }
 
-.experience{
+.experience {
     width: 1000px;
     height: auto;
     display: flex;
 }
 
 .experience li {
-    background-color: rgb(248, 245, 252) !important;
+    background-color: rgba(248, 245, 252, 0.5);
     border: 0.5px solid rgb(128, 128, 128);
     margin: 10px;
     padding: 20px;
     list-style-type: none;
 }
-#skills ul, #projects ul {
-    width: 450px;
+
+#skills ul,
+#projects ul {
+    width: max-content;
     height: auto;
-    
+
 }
-#skills li, #projects li {
-    background-color: rgb(248, 245, 252) !important;
+
+#skills li,
+#projects li {
+    background-color: rgba(248, 245, 252, 0.5);
     list-style-type: circle;
     margin: 2px;
     padding: 2px;
 }
+
 .container {
-    
+
     display: grid;
     grid-template-columns: 400px 400px;
     gap: 10px;
     grid-auto-rows: 3;
-  }
+}
 
-  .name {
+.name {
     grid-column: 1;
     grid-row: 1;
-  }
-  .email {
+}
+
+.email {
     grid-column: 2;
     grid-row: 1;
-  }
-  .message {
+}
+
+.message {
     grid-column: 1/2;
     grid-row: 2;
-  }
-  .button {
+}
+
+.button {
     grid-column: 1;
-    grid-row: 3; 
-  }
+    grid-row: 3;
+}
 
 label {
     font-size: 25px !important;
@@ -129,7 +182,7 @@ label {
 input,
 textarea {
     color: rgb(0, 0, 0);
-    background-color: rgb(251, 248, 252) !important;
+    background-color: rgb(251, 248, 252);
     font-size: 20px;
     border: 2 px rgb(35, 35, 35) solid;
     padding: 5px;
