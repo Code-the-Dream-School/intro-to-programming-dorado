@@ -25,3 +25,64 @@ for (let i = 0; i < skills.length; i++) {
   skill.innerHTML = skills[i];
   skillsList.appendChild(skill);
 }
+
+const messageForm = document.querySelector('[name="leave_message"]');
+
+// Display Messages in List Section
+
+const messageSection = document.querySelector("#messages");
+
+const messageList = messageSection.querySelector("ul");
+
+const newMessage = document.createElement("li");
+
+// Remove Buttons
+
+const removeButton = document.createElement("button");
+
+removeButton.innerText = "remove";
+
+removeButton.setAttribute("type", "button");
+
+removeButton.addEventListener("click", (event) => {
+  const entry = removeButton.parentNode;
+
+  entry.remove();
+});
+
+// Add Message to List
+
+// newMessage.appendChild(removeButton);
+// messageList.appendChild(newMessage);
+
+// Form Submission
+
+messageForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const senderName = event.target.name.value;
+
+  const senderEmail = event.target.email.value;
+
+  const senderMessage = event.target.message.value;
+
+  console.log(senderName);
+
+  console.log(senderEmail);
+
+  console.log(senderMessage);
+
+  // const messageSection = document.querySelector("#messages");
+
+  // const messageList = messageSection.querySelector("ul");
+
+  // const newMessage = document.createElement("li");
+
+  newMessage.innerHTML = `<a href="${event.target.email.value}">${event.target.name.value}</a><span> wrote: ${event.target.message.value} </span>`;
+
+  newMessage.appendChild(removeButton);
+
+  messageList.appendChild(newMessage);
+
+  messageForm.reset();
+});
