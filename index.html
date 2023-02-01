@@ -3,20 +3,43 @@
   <head>
     <title>Resume</title>
     <meta charset="UTF-8" />
+    <meta http-equiv="content-language" content="en" />
     <link rel="stylesheet" href="CSS/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <header>
+      <!--/*Add a navigational header to the webpage
+        From lesson 4.5: Make the header sticky/fixed on the page*/-->
       <nav id="nav">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="projects">Projects</a>
-        <a href="#connect">Connect</a>
+        <div id="NavLinks">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#connect">Connect</a>
+        </div>
+        <!--Stretch goal: hamburger menu for mobile site-->
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
       </nav>
+      <!--Stretch goal: Add a button to toggle your site to dark mode-->
+      <div>
+        <button onclick="darkMode()" class="darkButton">
+          <i class="fa fa-moon-o" aria-hidden="true"></i>/<i
+            class="fa fa-sun-o"
+            aria-hidden="true"
+          ></i>
+        </button>
+      </div>
       <h1 id="myName">Anna Pestova</h1>
     </header>
     <main>
+      <!--about me-->
       <section id="about">
         <h2>About:</h2>
         <p>
@@ -24,6 +47,7 @@
           assistant attorney and public service. Currently in transition to IT.
         </p>
       </section>
+      <!--work experience-->
       <section id="experience">
         <h2>Experience:</h2>
         <ul class="experience">
@@ -57,46 +81,74 @@
           </li>
         </ul>
       </section>
+      <!--my skills (adding through JS)-->
       <section id="skills">
-        <h2>Skills</h2>
-        <ul></ul>
+        <h2>Skills:</h2>
+        <ul class="skills"></ul>
       </section>
+      <!--my projects ( List of public repositories retrieved from GitHub API via Fetch
+        adding through JS)-->
       <section id="projects">
-        <h2>Projects</h2>
+        <h2>Projects:</h2>
         <ul></ul>
       </section>
+      <!--contact me section-->
       <section id="connect">
-        <h2>Connect:</h2>
+        <h2>Contact me:</h2>
+        <!--paste links-->
         <ul>
-          <li>GitHub: https://github.com/AnnaPestova1</li>
+          <li><a href="https://github.com/AnnaPestova1">GitHub</a></li>
         </ul>
       </section>
+      <!--leave message section-->
       <section id="leave_a_message">
         <h2>Leave a Message</h2>
         <form name="leave_message">
           <div class="container">
             <div class="name">
               <label for="name">Name</label><br />
-              <input type="text" name="name" id="name" required /><br />
+              <input type="text" name="name" id="name" required="true" /><br />
             </div>
             <div class="email">
               <label for="email">Email Address</label><br />
-              <input type="email" name="email" id="email" required /><br />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required="true"
+              /><br />
             </div>
             <div class="message">
               <label for="message" for="message">Message</label><br />
-              <textarea name="message" id="message" required></textarea><br />
+              <textarea name="message" id="message" required="true"></textarea
+              ><br />
             </div>
             <div class="button"><button type="submit">Submit</button></div>
           </div>
         </form>
       </section>
+      <!--section with all leaved messages (hidden when no messages there)-->
       <section id="messages">
         <h2>Messages</h2>
         <ul></ul>
       </section>
     </main>
-    <footer></footer>
+    <!--footer woth copyright adding through JS and contacts link
+      From Final Rubric: Webpage contains footer with the following:
+ Copyright text with current year (inserted via JavaScript)
+ Social media links (e.g. LinkedIn, GitHub, etc.) (these can be in a “Contact Me” section 
+ instead if student prefers that layout for their portfolio)s-->
+    <footer>
+      <div class="footerLinks">
+        <ul>
+          <li class="github">
+            <a href="https://github.com/AnnaPestova1" class="gitHubLink"
+              ><i class="fa fa-github fa-2x" aria-hidden="true"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
     <script src="js/index.js"></script>
   </body>
 </html>

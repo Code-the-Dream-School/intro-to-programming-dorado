@@ -1,14 +1,19 @@
-/* * {
-    border: 1px red solid;
-} */
+/*Load in a font family from Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/*Change the default text color
+Customize the font family
+*/
 body {
-    color: rgb(43, 2, 53);
-    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(53, 5, 126);
+    font-family: 'Montserrat', 'Helvetica', sans-serif;
     font-size: 20px;
-    margin: 10px;
-    padding: auto;
+    padding: 0;
+    margin: 0;
     animation: myanimation 15s infinite;
 }
+
+/*  Change the background color of the page body */
 
 @keyframes myanimation {
     0% {
@@ -36,16 +41,14 @@ body {
     }
 }
 
+
 header {
     margin-top: 30px;
     padding: 20px;
 }
 
-#myName {
-    font-size: 50px;
-}
-
-nav {
+/*Add a navigational header to the webpage*/
+nav #NavLinks {
     background-color: rgba(0, 0, 0, .03);
     box-shadow: 0 10px 20px rgba(0, 0, 0, .03);
     -webkit-backdrop-filter: blur(8px);
@@ -66,38 +69,59 @@ nav {
 
 }
 
-nav a {
-    color: rgb(81, 80, 81);
-    padding: 15px;
-    color: rgb(81, 80, 81);
+
+nav a.icon {
+    display: none;
 }
 
-nav a:hover {
+nav #NavLinks a {
+    color: rgb(81, 80, 81);
+    padding: 15px;
+}
+
+nav #NavLinks a:hover {
     color: rgb(94, 19, 94);
     text-decoration: none;
 }
 
-nav a:link {
+nav #NavLinks a:link {
     text-decoration: none;
 }
 
 
-nav a:visited {
+nav #NavLinks a:visited {
     text-decoration: none;
 }
 
 
-nav a:active {
+nav #NavLinks a:active {
     text-decoration: none;
 }
 
+#myName {
+    font-size: 50px;
+}
 
+.darkButton {
+    background-color: rgb(206, 205, 210);
+    border-radius: 5px;
+    color: rgb(38, 4, 138);
+    font-size: 20px;
+    text-align: center;
+    border-width: 1px;
+    border-radius: 5px;
+    margin-top: 40px;
+    float: right;
+    cursor: pointer;
+}
 
+/*Add spacing (padding/margin) between sections*/
 section {
     margin: 20px;
     padding: 20px;
 }
 
+/*Change the font size, weight, and color of all headings*/
 h1 {
     color: rgb(53, 5, 126);
     font-size: 50px;
@@ -116,35 +140,65 @@ h3 {
     font-weight: bold;
 }
 
+/*Transform the "Experience" list items into styled blocks.
+Change the layout of your "Experience" section using rows and 
+columns so items are displayed in a grid rather than a list*/
 .experience {
-    width: 1000px;
     height: auto;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    column-gap: 20 px;
 }
 
+/*Transform the "Skills" list items into styled blocks
+From Final Rubric Webpage contains “Skills” section with the following:
+ List of skills in a styled grid or flex layout (inserted via JavaScript)*/
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+
+}
+
+
 .experience li {
-    background-color: rgba(248, 245, 252, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 0.5px solid rgb(128, 128, 128);
+    margin: 10px;
+    padding: 20px;
+    width: 25%;
+    list-style-type: none;
+
+}
+
+.skills li {
+    background-color: rgba(255, 255, 255, 0.5);
     border: 0.5px solid rgb(128, 128, 128);
     margin: 10px;
     padding: 20px;
     list-style-type: none;
+
 }
 
-#skills ul,
+/*Stretch goal: Customize the styling of your "Projects" section list*/
+
 #projects ul {
     width: max-content;
     height: auto;
 
 }
 
-#skills li,
 #projects li {
-    background-color: rgba(248, 245, 252, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     list-style-type: circle;
     margin: 2px;
     padding: 2px;
 }
 
+/*Style the "Leave a Message" form elements and customize the button.
+Update the "Leave a Message" form to use Flexbox or CSS Grid*/
 .container {
 
     display: grid;
@@ -174,9 +228,10 @@ h3 {
 }
 
 label {
-    font-size: 25px !important;
+    font-size: 25px;
     color: rgb(38, 4, 138);
-    font-size: 20px;
+    margin: 20px;
+    padding: 20px;
 }
 
 input,
@@ -194,15 +249,10 @@ textarea {
     height: 150px;
 }
 
-label {
-    margin: 20px;
-    padding: 20px;
-}
-
-form button {
-    background-color: rgb(206, 205, 210) !important;
+button {
+    background-color: rgb(206, 205, 210);
     color: rgb(38, 4, 138);
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
     width: 80px;
     height: 40px;
@@ -214,37 +264,167 @@ form button {
 }
 
 
+/*Transform the "Messages" list items 
+into styled blocks and customize the button(s)*/
 #messages ul {
     font-size: 20px;
-    background-color: rgb(248, 245, 252) !important;
-    width: 700px;
+    color: rgb(12, 2, 45);
+    background-color: rgb(233, 232, 234);
+    width: max-content;
     height: auto;
     list-style-type: square;
 }
 
-#messages button {
-    background-color: rgb(206, 205, 210) !important;
-    border-radius: 5px;
-    color: rgb(38, 4, 138);
-    font-size: 12px;
-    text-align: center;
-    width: 50px;
-    height: 35px;
-    border-width: 1px;
-    border-radius: 5px;
-    padding: 3px;
-    margin: 5px;
-    cursor: pointer;
-}
-
+/*Change the spacing and background color of the footer*/
 footer {
     background-color: rgb(206, 205, 210);
+    color: rgb(53, 5, 126);
     font-size: 20px;
     letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
 }
 
-@media only screen and (max-width: 600px) {
+.footerLinks {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+
+}
+
+.footerLinks li {
+    list-style-type: none;
+}
+
+div.footerLinks * {
+    color: rgb(53, 5, 126);
+}
+
+.dark-mode,
+.dark-mode nav a,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode label {
+    background-color: rgb(22, 1, 29);
+    color: rgb(251, 251, 251);
+    animation: none;
+}
+
+.dark-mode input,
+.dark-mode textarea {
+    color: rgb(0, 0, 0);
+    background-color: rgb(251, 248, 252);
+}
+
+
+
+/*Use Media Queries to make sure the webpage 
+is responsive for all device sizes (mobile, tablet, desktop, etc.)*/
+
+@media (max-device-width: 900px) {
     body {
-        font-size: 50px !important;
+        font-size: 55px;
+    }
+
+    nav {
+        background-color: none;
+        overflow: hidden;
+        position: fixed;
+        right: 0;
+        justify-content: flex-end;
+        margin: 50px;
+        padding: 50px;
+        margin-top: 40px;
+        padding-top: 40px;
+    }
+
+    nav #NavLinks {
+        background-color: rgba(3, 3, 3, 0.7);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+        backdrop-filter: blur(20px);
+        font-weight: bold;
+        display: none;
+    }
+
+    nav #NavLinks a {
+        color: rgb(252, 249, 252);
+        margin-left: 20px;
+        padding-left: 20px;
+    }
+
+    nav a {
+        color: rgb(53, 5, 126);
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 60px;
+        display: block;
+    }
+
+    /*Stretch goal: "hamburger menu" to minimize your navigation on smaller devices*/
+    nav a.icon {
+        background: rgba(78, 3, 110, 0.3);
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+
+    #myName,
+    h1 {
+        font-size: 80px;
+    }
+
+    h2,
+    h3 {
+        font-size: 60px;
+    }
+
+    #messages ul,
+    .darkButton,
+    nav,
+    label,
+    footer,
+    input,
+    textarea,
+    button {
+        font-size: 40px;
+        white-space: nowrap;
+    }
+
+    .darkButton {
+        width: max-content;
+        height: auto;
+        padding: 10px;
+        margin-top: 70px;
+        float: none;
+    }
+
+    textarea {
+        width: 800px;
+        height: 450px;
+    }
+
+    input {
+        width: 350px;
+        height: 100px;
+
+    }
+
+    button {
+        width: 150px;
+        height: 60px;
+    }
+
+    .experience {
+        display: block;
+    }
+
+    #skills ul,
+    #projects ul {
+        width: auto;
+
     }
 }

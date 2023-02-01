@@ -1,12 +1,16 @@
-// footer info
+// footer copyright info
 const today = new Date();
 const thisYear = today.getFullYear();
 const footer = document.querySelector("footer");
 const copyright = document.createElement("p");
 copyright.innerHTML = "© Anna Pestova " + thisYear;
-footer.appendChild(copyright);
+footer.prepend(copyright);
+//Filling the Skills section:
 //create list of skills
 let skills = [
+  "JavaScript",
+  "HTML",
+  "CSS",
   "Computer proficiency",
   "Communication skills",
   "Problem-solving abilities",
@@ -21,11 +25,11 @@ for (let i = 0; i < skills.length; i++) {
   skill.innerHTML = skills[i];
   skillsList.appendChild(skill);
 }
-//fill the #messages section
+//filling the messages section
 let messageSection = document.getElementById("messages");
-//Hide the #messages section when the list is empty
+//Stretch goal lesson 4.3: Hide the messages section when the list is empty
 messageSection.style.display = "none";
-//Handle message form submit
+//Handle Leave Message form submit
 const messageForm = document.querySelector("[name='leave_message']");
 messageForm.addEventListener(
   "submit",
@@ -47,18 +51,50 @@ messageForm.addEventListener(
       email1.value +
       "'>" +
       name1.value +
-      "</a> <span>" +
+      "</a> <span id='canEdit'>" +
       message1.value +
       "</span>";
     // create the remove message  button
     let removeButton = document.createElement("button");
-    removeButton.innerHTML = "Remove";
+    removeButton.innerText = "Remove";
     removeButton.type = "button";
 
-    removeButton.addEventListener("click", function (handles) {
-      var entry = removeButton.parentNode;
+    removeButton.addEventListener("click", function () {
+      const entry = removeButton.parentNode;
       entry.remove();
     });
+
+    //Stretch goal lesson 4.3: Create an "edit" button for each message entry
+    // that allows the user to input a new/modified message
+    const editButton = document.createElement("button");
+    editButton.innerText = "Edit";
+    editButton.type = "button";
+    const saveButton = document.createElement("button");
+    saveButton.innerText = "Save";
+    saveButton.type = "button";
+
+    saveButton.style.display = "none";
+    editButton.addEventListener("click", function () {
+      const entry = editButton.parentNode;
+      const editMessage = entry.querySelector("span");
+      editMessage.contentEditable = "true";
+      editMessage.focus();
+      editMessage.style.backgroundColor = "rgb(255, 255, 255)";
+      saveButton.style.display = "initial";
+      editButton.style.display = "none";
+    });
+
+    saveButton.addEventListener("click", function () {
+      const entry = saveButton.parentNode;
+      const editMessage = entry.querySelector("span");
+      editMessage.contentEditable = false;
+      editMessage.style.backgroundColor = "rgb(233, 232, 234)";
+      editButton.style.display = "initial";
+      saveButton.style.display = "none";
+    });
+    newMessage.appendChild(editButton);
+    newMessage.appendChild(saveButton);
+
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
     messageSection.style.display = "block";
@@ -66,6 +102,8 @@ messageForm.addEventListener(
   },
   false
 );
+
+//Lesson 6.1: AJAX Basics
 
 // var githubRequest = new XMLHttpRequest();
 // var repositories=[];
@@ -82,12 +120,15 @@ messageForm.addEventListener(
 
 // for (let l=0; l<repositories.length; l++) {
 //     var project = document.createElement('li');
+// stretch goals: Transform your repository names into <a> tags that link to GitHub
+// Display additional information about your repositories
 //     project.innerHTML = `<a href="${repositories[l].html_url}">${repositories[l].name}</a><span> Updated year: ${new Date(repositories[l].updated_at).getFullYear()}</span>`;
 //     projectList.appendChild(project);
 // }
 // }
 // )
 
+// Lesson 6.2: Working with Fetch API
 fetch("https://api.github.com/users/AnnaPestova1/repos", {
   method: "GET",
   mode: "cors",
@@ -110,6 +151,23 @@ fetch("https://api.github.com/users/AnnaPestova1/repos", {
       projectList.appendChild(project);
     }
   })
+  // Stretch goal: Chain a catch() function to your fetch call to handle errors from the server
   .catch(function (error) {
     console.error("Error:", error);
   });
+
+function toggleMenu() {
+  var x = document.getElementById("NavLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+  document.querySelectorAll("#NavLinks a").forEach(function (collapseMenu) {
+    collapseMenu.addEventListener("click", toggleMenu);
+  });
+}
+function darkMode() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
