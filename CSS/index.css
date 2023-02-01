@@ -183,14 +183,14 @@ From Final Rubric Webpage contains “Skills” section with the following:
 }
 
 /*Stretch goal: Customize the styling of your "Projects" section list*/
-
-#projects ul {
+#projects ul,
+#connect ul {
     width: max-content;
     height: auto;
-
 }
 
-#projects li {
+#projects li,
+#connect li {
     background-color: rgba(255, 255, 255, 0.5);
     list-style-type: circle;
     margin: 2px;
