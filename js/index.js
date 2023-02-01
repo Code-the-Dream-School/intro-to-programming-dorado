@@ -103,31 +103,6 @@ messageForm.addEventListener(
   false
 );
 
-//Lesson 6.1: AJAX Basics
-
-// var githubRequest = new XMLHttpRequest();
-// var repositories=[];
-
-// githubRequest.open('GET', 'https://api.github.com/users/AnnaPestova1/repos');
-// githubRequest.send();
-// githubRequest.addEventListener('load', function(){
-//    repositories = JSON.parse(this.response);
-//     console.log(repositories)
-
-// let projectSection = document.getElementById('projects');
-
-// let projectList = projectSection.querySelector('ul');
-
-// for (let l=0; l<repositories.length; l++) {
-//     var project = document.createElement('li');
-// stretch goals: Transform your repository names into <a> tags that link to GitHub
-// Display additional information about your repositories
-//     project.innerHTML = `<a href="${repositories[l].html_url}">${repositories[l].name}</a><span> Updated year: ${new Date(repositories[l].updated_at).getFullYear()}</span>`;
-//     projectList.appendChild(project);
-// }
-// }
-// )
-
 // Lesson 6.2: Working with Fetch API
 fetch("https://api.github.com/users/AnnaPestova1/repos", {
   method: "GET",

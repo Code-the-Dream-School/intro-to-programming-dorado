@@ -322,8 +322,9 @@ div.footerLinks * {
 
 /*Use Media Queries to make sure the webpage 
 is responsive for all device sizes (mobile, tablet, desktop, etc.)*/
-
-@media (max-device-width: 900px) {
+/* use for production (doesn't work with Mobile First Simulator
+@media (max-device-width: 900px) { */
+@media (max-width: 900px) {
     body {
         font-size: 55px;
     }
@@ -420,6 +421,10 @@ is responsive for all device sizes (mobile, tablet, desktop, etc.)*/
 
     .experience {
         display: block;
+    }
+
+    .experience li {
+        width: auto;
     }
 
     #skills ul,
