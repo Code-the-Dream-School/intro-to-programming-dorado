@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: #ACC8E5;
+    color: #112A46;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
+
+
+/* Submit button section  */
+.container{
+    overflow: hidden;
+    
+}
+
+.tab .tab-1 {
+    display: flex;
+}
+.tab-2{
+   margin-top: 1rem;
+}
+.tab .tab-2 {
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+tr{
+    transition:all .25s ease-in-out
+}
+tr:hover{
+    background-color:#EEE;
+    cursor: pointer
+}
+
+.button-sec{
+    display: flex;
+    margin-left: 200px;
+}
+
+.button-sec{
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+#show{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.edit-delete{
+    display: inline-block;
+    margin-left: 200px;
+    margin-top: 1rem;
+}
+
+#table{
+    border-radius: 25px;
+    border-spacing: 5px;/* display: inline-block; */
+}
+
+th {
+    border: none;
+}
+
+td{
+    border: none;
+}
+
+section{
+    margin: 0px;
+    padding: 20px;
+}
+
+/* .job-1{
+    display: flex;
+} */
+
+
+h1, h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #741183;
+}
+
+.exp-list{
+    display: flex;
+}
+
+.exp-list > li{
+   
+    background: #62be7e;
+    width: 20%;
+    border: 1px dashed;
+    margin: 2rem;
+    list-style: none;
+
+}
+
+#web-skills {
+    background: rgb(247, 173, 103);
+    width: 30%;
+    border: 1px dashed;
+}
+
+.labels{
+    font-size: 1.3rem;
+    padding: 10px;
+    color: rgb(17, 99, 96);
+    display: flex;
+    
+}
+
+
+.job-1{
+    padding: 0.1rem;
+}
+
+input{
+    font-size: 1rem;
+    padding: 10px;
+    border: olive;
+    margin: 15px;
+    display: block;
+}
+
+button[type='submit']{
+    padding: 5px;
+    background: salmon;
+    border: 2px dotted;
+}
+
+.inputs{
+   
+    list-style: none;
+}
+
+#list{
+    display: flex;
+    flex-direction: column;
+}
+
+span{
+    margin: .5rem;
+}
+
+button[type=button]{
+    margin: .5rem;
+    padding: 3px;
+    background: salmon;
+    border-radius: 10px;
+    
+}
+
+#contact-me{
+    margin-top: 8rem;
+}
+
+#contact{
+    margin-top: 8rem;
+}
+
+footer{
+    box-sizing: border-box;
+    width: 10%;
+    margin: 0 auto;
+    border:2px  solid rgb(60, 117, 22);
+    background: thistle;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    body {background: rgb(214, 206, 178);}
+}
+
+@media only screen and (min-width: 600px) {
+    body {background: rgb(3, 180, 127);}
+}
+
+@media only screen and (min-width: 992px) {
+    body {background: #ACC8E5;}
+} 
+
+@media only screen and (min-width: 1200px) {
+    body {background: #ACC8E5;}
+}
+
+#about-me{
+    margin: 2rem;
+}
+
+
+.nav-main{
+    margin: 0 auto;
+    width: 100%;
+    background:#F7F6F5;
+    border-top: 1px solid #CFCFCF;
+    position: fixed;
+   
+}
+
+
+
+.nav-item{
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    border-bottom: 1px solid;
+}
+
+.nav-item:hover{
+    background: white;
+    border-bottom: none;
+    border-right: 1px solid #CFCFCF;
+    border-left: 1px solid #CFCFCF;
+    margin: 0 -1px;
+}
+
+.nav-item-current .nav-item-link{
+    color: #333333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.3rem;
+}
+
+.nav-item-link {
+    text-decoration: none;
+    color: #555;
+    font-family: Roboto;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-top: 25px;
+  }
+
+  .nav-item-link:hover{
+    text-decoration: underline;
+    color: #1C60BB;
+  }
+
+
+
