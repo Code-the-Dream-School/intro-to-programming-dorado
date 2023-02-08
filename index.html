@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Masooma Jafari</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/index.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Signika+Negative:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <strong class="navItem" id="logoName"><em>Masooma Jafari</em> </strong>
+        <a href="#about" class="navItem">About</a>
+        <a href="#experience" class="navItem">Experience</a>
+        <a href="#skills" class="navItem">Skills</a>
+        <a href="#connect" class="navItem">Connect</a>
+      </nav>
+    </header>
+    <section id="about">  
+      <h2>About Me</h2>    
+      <div class="aboutMe">
+        <div class="aboutCol">
+          <img src="img/profile.png" alt="profile picture">
+        </div>
+        <div class="aboutCol" >
+          <p id="welcome">Hi there,</p>
+          <p>I am Masooma,I always like learning new things and enjoy solving problems, that is why I choose to work as a 
+            web developer. I worked as a web developer 6 years ago, but I have taken a career break to raise
+            my kids. Now I am trying to refresh my knowldege and start my career again.</p>
+        </div>
+      </div>
+    </section>
+    <section id="experience">
+      <h2>Experience</h2>
+      <table>
+        <tbody>
+          <tr>
+            <td>Childcare Provider</td>
+            <td>2019-Present</td>
+          </tr>
+          <tr>
+            <td>Web Developer : ICTA</td>
+            <td>2015-2016</td>
+          </tr>
+          <tr>
+            <td>Web Developer Intern(Paid internship): Netlinks</td>
+            <td>2015</td>
+          </tr>
+          <tr>
+            <td>Web Developer : ADRAS</td>
+            <td>2014-2015</td>
+          </tr>
+          <tr>
+            <td>Technical Translator : Inteql LLC</td>
+            <td>2013-2014</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skillRow1"></div>
+      <div class="skillRow2"></div>
+    </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <ol class="projectList"></ol>
+      </div>
+      
+    </section>
+    <hr>
+    <section id="connect">
+      <h2>Leave a Message</h2>
+      <form name="leave_message" id="leave_message">
+        <label for="name" class="formItem">Name: </label>
+        <input type="text" name="name" id="name" class="formItem" required>
+        <label for="email" class="formItem">Email: </label>
+        <input type="email" name="email" id="email" class="formItem" required>
+        <label for="message" class="formItem">Message:</label>
+        <textarea name="message"  id="message" class="formItem" cols="20" rows="8" required></textarea>
+        <button type="submit" id="submit" class="formItem">Submit</button>
+      </form>
+    </section>
+    <section id="messages">
+      <h2>Messages</h2>
+      <ul id="user_message"></ul>
+    </section>
+    <footer>
+      <a href="https://www.facebook.com/masooma.jafari.1/" target="_blank" class="footerItem">
+        <i class="fa-brands fa-square-facebook fa-2xl"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/masoomajafari/" target="_blank" class="footerItem">
+        <i class="fa-brands fa-linkedin fa-2xl"></i>
+      </a>
+      <a href="https://twitter.com/MaSoOmAJaFaRY" target="_blank" class="footerItem">
+        <i class="fa-brands fa-square-twitter fa-2xl"></i>
+      </a>
+      <a href="mailto:masuma.jafari@gmail.com" class="footerItem">
+        <i class="fa-solid fa-envelope fa-2xl"></i>
+      </a>
+    </footer>
+    <script src="https://kit.fontawesome.com/eba4d95188.js" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
