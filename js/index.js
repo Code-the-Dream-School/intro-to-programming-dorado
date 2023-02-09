@@ -1,17 +1,19 @@
-{
-    // Lesson 4.2 Copyright Text in Footer (Javascript & The DOM)
-    // --------------------------------------------------------------
-    const renderCopyright = () => {
-      const today = new Date()
-      const thisYear = today.getFullYear()
-  
-      // DOM selection
-      const copyright = document.querySelector('#copyright')
-  
-      // DOM manipulation (modify)
-      copyright.innerHTML = `&copy; Rachel Westermann ${thisYear}`
-    }
-}
+      // CHALLENGE 1. Insert Copyright Text in Footer
+  // --------------------------------------------------------------
+  const renderCopyright = () => {
+    const today = new Date()
+    const thisYear = today.getFullYear()
+
+    // DOM selection
+    const copyright = document.querySelector('#copyright')
+
+    // DOM manipulation (modify)
+    copyright.innerHTML = `&copy; Elliot Thompson ${thisYear}`
+  }
+    
+    window.onload = copyDate;
+  }
+
 
    // Lesson 4.2 Create List of Skills (Javascript & The DOM)
   // --------------------------------------------------------------
@@ -25,13 +27,12 @@
       'Sketch',
       'Adobe XD',
       'MySQL',
-      'etc.',
     ]
 
     // DOM selection
     const skillsSection = document.querySelector('#skills')
     const skillsList = skillsSection.querySelector('ul')
-
+//Skills list
     for (let i = 0; i < skills.length; i++) {
       // DOM manipulation (create)
       const skill = document.createElement('li')
@@ -153,7 +154,7 @@
   function renderProjectsWithXHR() {
     const githubRequest = new XMLHttpRequest()
 
-    githubRequest.open('GET', 'https://api.github.com/users/ethomp-dev/repos')
+    githubRequest.open('GET', 'https://api.github.com/users/rachellibrarian/repos')
 
     githubRequest.addEventListener('load', function () {
       const data = JSON.parse(this.response)
@@ -177,7 +178,7 @@
   }
 
   function renderProjectsWithFetch() {
-    fetch('https://api.github.com/users/ethomp-dev/repos')
+    fetch('https://api.github.com/users/rachellibrarian/repos')
       .then((res) => res.json())
       .then((data) => {
         // filter out irrelevant repositories
@@ -186,6 +187,7 @@
         )
 
         const projectSection = document.querySelector('#projects')
+        console.log(projectSection)
         const projectList = projectSection.querySelector('ul')
 
         for (let repository of filteredData) {
@@ -197,7 +199,7 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    renderCopyright()
+    // renderCopyright() 
     renderSkillsList()
     renderMessageForm()
     // renderProjectsWithXHR()
