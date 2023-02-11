@@ -8,7 +8,7 @@
     const copyright = document.querySelector('#copyright')
 
     // DOM manipulation (modify)
-    copyright.innerHTML = `&copy; Elliot Thompson ${thisYear}`
+    copyright.innerHTML = `&copy; Rachel Westermann ${thisYear}`
   }
     
     window.onload = copyDate;
@@ -17,32 +17,32 @@
 
    // Lesson 4.2 Create List of Skills (Javascript & The DOM)
   // --------------------------------------------------------------
-  const renderSkillsList = () => {
-    const skills = [
-      'JavaScript',
-      'HTML',
-      'CSS',
-      'Jira',
-      'Figma',
-      'Sketch',
-      'Adobe XD',
-      'MySQL',
-    ]
+  function renderSkillsList() {
+  const skills = [
+    'JavaScript',
+    'HTML',
+    'CSS',
+    'Jira',
+    'Figma',
+    'Sketch',
+    'Adobe XD',
+    'MySQL',
+  ]
 
-    // DOM selection
-    const skillsSection = document.querySelector('#skills')
-    const skillsList = skillsSection.querySelector('ul')
-//Skills list
-    for (let i = 0; i < skills.length; i++) {
-      // DOM manipulation (create)
-      const skill = document.createElement('li')
-      skill.classList.add('tag')
-      skill.innerText = skills[i]
+  // DOM selection
+  const skillsSection = document.querySelector('#skills')
+  const skillsList = skillsSection.querySelector('ul')
+  //Skills list
+  for (let i = 0; i < skills.length; i++) {
+    // DOM manipulation (create)
+    const skill = document.createElement('li')
+    skill.classList.add('tag')
+    skill.innerText = skills[i]
 
-      // DOM manipulation (modify)
-      skillsList.appendChild(skill)
-    }
+    // DOM manipulation (modify)
+    skillsList.appendChild(skill)
   }
+}
 
    // Lesson 4.3 Handle Message Form Submit (HTML Forms and DOM Practice)
   // --------------------------------------------------------------
