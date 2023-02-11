@@ -1,4 +1,4 @@
-      // CHALLENGE 1. Insert Copyright Text in Footer
+      // Inserting Copyright Text in Footer
   // --------------------------------------------------------------
   const renderCopyright = () => {
     const today = new Date()
@@ -10,12 +10,7 @@
     // DOM manipulation (modify)
     copyright.innerHTML = `&copy; Rachel Westermann ${thisYear}`
   }
-    
-    window.onload = copyDate;
-  }
-
-
-   // Lesson 4.2 Create List of Skills (Javascript & The DOM)
+   // Creating List of Skills (Javascript & The DOM)
   // --------------------------------------------------------------
   function renderSkillsList() {
   const skills = [
@@ -29,22 +24,22 @@
     'MySQL',
   ]
 
-  // DOM selection
-  const skillsSection = document.querySelector('#skills')
-  const skillsList = skillsSection.querySelector('ul')
-  //Skills list
-  for (let i = 0; i < skills.length; i++) {
-    // DOM manipulation (create)
-    const skill = document.createElement('li')
-    skill.classList.add('tag')
-    skill.innerText = skills[i]
+    // DOM selection
+    const skillsSection = document.querySelector('#skills')
+    const skillsList = skillsSection.querySelector('ul')
 
-    // DOM manipulation (modify)
-    skillsList.appendChild(skill)
+    for (let i = 0; i < skills.length; i++) {
+      // DOM manipulation (create)
+      const skill = document.createElement('li')
+      skill.classList.add('tag')
+      skill.innerText = skills[i]
+
+      // DOM manipulation (modify)
+      skillsList.appendChild(skill)
+    }
   }
-}
 
-   // Lesson 4.3 Handle Message Form Submit (HTML Forms and DOM Practice)
+   // Handling Message Form Submit (HTML Forms and DOM Practice)
   // --------------------------------------------------------------
   const BUTTON = {
     edit: 'edit',
@@ -199,9 +194,9 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    // renderCopyright() 
+    renderCopyright() 
     renderSkillsList()
     renderMessageForm()
-    // renderProjectsWithXHR()
+    renderProjectsWithXHR()
     renderProjectsWithFetch()
   })
