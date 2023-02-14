@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index_MQ.css">
+    <link rel="icon" href="/photos/purpleButterfly.png">
+
+    <title>Nicole's Profile Assignment</title>
+
+</head>
+
+<body>
+    <header id="top">
+        <nav id="headerNav">
+            <img id="headerLogo" src="photos/purpleButterfly.png" alt="purple butterfly logo" width="100" height="100">
+
+            <a href='#aboutMe'>ABOUT ME</a>
+            <a href="#experience">EXPERIENCE</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#connect">CONNECT</a>
+        </nav>
+
+    </header>
+
+    <div class="flex-container" id="aboutFlex">
+        <div class="flexItem">
+            <h2 id="aboutMe" class="aboutMeH2">ABOUT ME:</h2>
+            <p class="aboutMeParagraph"> Hi, I’m Nicole Bradley, a.k.a. NicoleCodeGirl for the gamers. I am working hard to achieve my dream. I am proud to 
+                tell you I am a self taught Wordpress developer, and lifelong student of technology and coding languages. My dream is to branch into game 
+                development in the future. I spend every minute of my free time expanding my skill set and developing websites, but coding isn’t paying the 
+                bills just yet.  I enjoy bringing my visions to life with technology, and I am always looking for the next challenge.</p>
+
+
+                <h2 class="aboutMeH2">ABOUT THE SITE:</h2>
+                <p class="aboutMeParagraph"> This website was a class project for Code The Dream, a coding bootcamp I recently graduated from. I am using the 
+                    project to test out the domain name and deployment capabilities between a number of options. I am working on a build that you will be able 
+                    to see here soon, so keep checking back!
+            </p>
+        </div>
+
+        <div class="flexItem photoFlexContainer">
+            <img id="profilePic" src="photos/photoNicole.jpeg" alt="photo of Nicole" width="200" height="300">
+        </div>
+    </div><!-- end of the flex container-->
+
+
+    <div id="content">
+
+        <section id="experienceBox">
+            <h2 id="experience" class="sections">Experience:</h2>
+            <div id="experienceList">
+                <p>I have 5 years experience in coding.</p>
+                <p>I have a GitHub project in progress called "Greetings World"</p>
+                <p>I have 3 months experience in teaching myself WordPress</p>
+                <p>I am experienced in doing research</p>
+                <div>
+                    <a href="#top" id="back2Top">BACK TO TOP</a>
+        </section>
+
+        <div class="flex-container" id="skillsProjects-flexContainer">
+
+            <section id="skills" class="flexItem2nd">
+                <h2 class="sections">Skills:</h3>
+                    <ul></ul>
+            </section>
+
+            <section id="projects" class="flexItem2nd">
+                <h2>Projects</h2>
+                <ul></ul>
+            </section>
+
+        </div><!--end flex container for the skills and projects-->
+
+
+        <section id="socialBox">
+            <p>Please connect with me. I would love to meet other coders and gamers!</p>
+            <div id="connectFlexContainer">
+            <h2 id="connect" class="sections">Connect:</h2>
+            
+                <a id="gitHubLink" href="https://github.com/nicoleCodeGirl/">
+                    <ion-icon name="logo-github" size="large"></ion-icon>
+                </a>
+
+                <a href="https://www.twitch.tv/nicolecodegirl">
+                    <ion-icon name="logo-twitch" size="large"></ion-icon>
+                </a>
+            </div>
+        </section>
+
+    <div id="messageBox">
+        <section>
+            <h2 class="sections">Leave a Message:</h2>
+            <p>This is a mock contact form. You can play around with is and see that messages can be 
+                posted below or removed. Learning to make message forms was part of my class project.</p>
+
+            <form id="leave_message" name="leave_message">
+                <div id="item-name">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" autocomplete="off" required>
+                    <br>
+                </div>
+
+                <div id="item-email">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" autocomplete="off" required>
+                    <br>
+                </div>
+
+                <div id="item-message">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" placeholder="Type your message" rows="10" cols="33"
+                    autocomplete="off" required></textarea>
+                    <br>
+                </div>
+
+                <div id="item-submit">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="messages">
+            <h2 class="sections">Messages</h2>
+            <ul></ul>
+        </section>
+    </div><!--end div for the message box-->
+    </div><!-- end content -->
+
+    <footer>
+
+        <nav id="footerNav">
+            <a href="#top">BACK TO TOP</a>
+
+        </nav>
+    </footer>
+
+    <script src="js/index.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+
+</html>
