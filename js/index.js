@@ -10,19 +10,36 @@
     // DOM manipulation (modify)
     copyright.innerHTML = `&copy; Rachel Westermann ${thisYear}`
   }
-   // Creating List of Skills (Javascript & The DOM)
+
+//Section for Listing Skills
+let skills = ['Javascript', 'HTML' , 'CSS', 'Jira'  , 'Figma' , 'Sketch' , 'Adobe XD' , ' Agile' , 'Scrum' , 'MySQL'];
+let SkillsSection=document.querySelector('#skills');
+for (i=0; i<skills.length; i++){
+  let skill=document.createElement('li'); //!Remember! when creating a new element always use document
+
+  skill.textContent = skills[i];
+  skillsList.appendChild(skill);
+}
+
+   
+  
+  // Creating List of Skills (Javascript & The DOM)
   // --------------------------------------------------------------
-  function renderSkillsList() {
-  const skills = [
-    'JavaScript',
-    'HTML',
-    'CSS',
-    'Jira',
-    'Figma',
-    'Sketch',
-    'Adobe XD',
-    'MySQL',
-  ]
+  //function renderSkillsList() {
+  //const skills = [
+    //'JavaScript',
+    //'HTML',
+    //'CSS',
+    //'Jira',
+    //'Figma',
+    //'Sketch',
+    //'Adobe XD',
+    //'MySQL',
+  //]
+
+  //Experience List Section
+
+
 
     // DOM selection
     const skillsSection = document.querySelector('#skills')
@@ -37,7 +54,7 @@
       // DOM manipulation (modify)
       skillsList.appendChild(skill)
     }
-  }
+  
 
    // Handling Message Form Submit (HTML Forms and DOM Practice)
   // --------------------------------------------------------------
@@ -146,57 +163,4 @@
     })
   }
 
-  function renderProjectsWithXHR() {
-    const githubRequest = new XMLHttpRequest()
 
-    githubRequest.open('GET', 'https://api.github.com/users/rachellibrarian/repos')
-
-    githubRequest.addEventListener('load', function () {
-      const data = JSON.parse(this.response)
-
-      // filter out irrelevant repositories
-      const filteredData = data.filter((repo) =>
-        repo.name.includes('intro-to-programming')
-      )
-
-      const projectSection = document.querySelector('#projects')
-      const projectList = projectSection.querySelector('ul')
-
-      for (let repository of filteredData) {
-        const project = document.createElement('li')
-        project.innerHTML = `<a class="link link--no-decor" href="${repository.html_url}">${repository.name}</a>`
-        projectList.appendChild(project)
-      }
-    })
-
-    githubRequest.send()
-  }
-
-  function renderProjectsWithFetch() {
-    fetch('https://api.github.com/users/rachellibrarian/repos')
-      .then((res) => res.json())
-      .then((data) => {
-        // filter out irrelevant repositories
-        const filteredData = data.filter((repo) =>
-          repo.name.includes('intro-to-programming')
-        )
-
-        const projectSection = document.querySelector('#projects')
-        console.log(projectSection)
-        const projectList = projectSection.querySelector('ul')
-
-        for (let repository of filteredData) {
-          const project = document.createElement('li')
-          project.innerHTML = `<a class="link link--no-decor" href="${repository.html_url}">${repository.name}</a>`
-          projectList.appendChild(project)
-        }
-      })
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    renderCopyright() 
-    renderSkillsList()
-    renderMessageForm()
-    renderProjectsWithXHR()
-    renderProjectsWithFetch()
-  })
