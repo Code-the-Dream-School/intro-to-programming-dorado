@@ -1,45 +1,24 @@
       // Inserting Copyright Text in Footer
-  // --------------------------------------------------------------
   const renderCopyright = () => {
     const today = new Date()
     const thisYear = today.getFullYear()
 
-    // DOM selection
+    // DOM selection //
     const copyright = document.querySelector('#copyright')
 
-    // DOM manipulation (modify)
-    copyright.innerHTML = `&copy; Rachel Westermann ${thisYear}`
+    // DOM manipulation (modify) 
+    copyright.textContent = `@ Rachel Westermann ${thisYear}`;
   }
 
-//Section for Listing Skills
-let skills = ['Javascript', 'HTML' , 'CSS', 'Jira'  , 'Figma' , 'Sketch' , 'Adobe XD' , ' Agile' , 'Scrum' , 'MySQL'];
-let SkillsSection=document.querySelector('#skills');
-for (i=0; i<skills.length; i++){
-  let skill=document.createElement('li'); //!Remember! when creating a new element always use document
-
-  skill.textContent = skills[i];
-  skillsList.appendChild(skill);
-}
-
-   
-  
-  // Creating List of Skills (Javascript & The DOM)
-  // --------------------------------------------------------------
-  //function renderSkillsList() {
-  //const skills = [
-    //'JavaScript',
-    //'HTML',
-    //'CSS',
-    //'Jira',
-    //'Figma',
-    //'Sketch',
-    //'Adobe XD',
-    //'MySQL',
-  //]
-
-  //Experience List Section
-
-
+  const renderSkillsList = () => {
+    const skills = [
+      'JavaScript',
+      'HTML',
+      'CSS',
+      'Project Management,
+      'Scrum',
+      'MySQL',
+    ]
 
     // DOM selection
     const skillsSection = document.querySelector('#skills')
@@ -54,7 +33,40 @@ for (i=0; i<skills.length; i++){
       // DOM manipulation (modify)
       skillsList.appendChild(skill)
     }
+  }
+   
   
+   // Lesson 4.2 Create List of Skills (Javascript & The DOM)
+  // --------------------------------------------------------------
+  const renderSkillsList = () => {
+    const skills = [
+      'JavaScript',
+      'HTML',
+      'CSS',
+      'Jira',
+      'Figma',
+      'Sketch',
+      'Adobe XD',
+      'MySQL',
+    ]
+
+    // DOM selection
+    const skillsSection = document.querySelector('#skills')
+    const skillsList = skillsSection.querySelector('ul')
+//Skills list
+    for (let i = 0; i < skills.length; i++) {
+      // DOM manipulation (create)
+      const skill = document.createElement('li')
+      skill.classList.add('tag')
+      skill.innerText = skills[i]
+
+      // DOM manipulation (modify)
+      skillsList.appendChild(skill)
+    }
+  }
+
+
+
 
    // Handling Message Form Submit (HTML Forms and DOM Practice)
   // --------------------------------------------------------------
@@ -161,6 +173,14 @@ for (i=0; i<skills.length; i++){
       // reset form
       event.target.reset()
     })
-  }
+  
 
 
+  document.addEventListener('DOMContentLoaded', () => {
+    renderCopyright() 
+    renderSkillsList()
+    renderMessageForm()
+    renderProjectsWithXHR()
+    renderProjectsWithFetch()
+  })
+}
