@@ -4,10 +4,10 @@
     const thisYear = today.getFullYear()
 
     // DOM selection //
-    const copyright = document.querySelector('#copyright')
+    const Copyright = document.querySelector('#Copyright')
 
     // DOM manipulation (modify) 
-    copyright.textContent = `@ Rachel Westermann ${thisYear}`;
+    Copyright.textContent = `@ Rachel Westermann ${thisYear}`;
   }
 
 //Skills List
@@ -209,5 +209,5 @@ doAjax()
     renderProjectsWithFetch()
   })
 
-}
+
 
