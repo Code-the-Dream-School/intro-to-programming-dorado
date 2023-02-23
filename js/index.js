@@ -37,64 +37,7 @@
       }
    }
      
-    
-  // Lesson 4.2 Create List of Skills (Javascript & The DOM)
-    // --------------------------------------------------------------
-    //const renderSkillsList = () => {
-      //const skills = [
-        //'JavaScript',
-        //'HTML',
-        //'CSS',
-        //'Jira',
-        //'Figma',
-        //'Sketch',
-        //'Adobe XD',
-        //'MySQL',
-      //]
-  
-  // DOM selection
-      //const skillsSection = document.querySelector('#skills')
-      //const skillsList = skillsSection.querySelector('ul')
-  //Skills list
-      //for (let i = 0; i < skills.length; i++) {
-        // DOM manipulation (create)
-       // const skill = document.createElement('li')
-        //skill.classList.add('tag')
-        //skill.innerText = skills[i]
-  
-        // DOM manipulation (modify)
-        //skillsList.appendChild(skill)
-     // }
-    //}
-
-
-    //AJax 
-  
-  //const doAjax = async()=>{
-    //const response = await fetch('https://api.github.com/users/rachellibrarian/repos'(Method,'GET')= > 
-    //console.log("inside async",)= >,
-    //console.log(response),
-    //repositories = await response.json()
-    //const projectSection = document.getElementById('projects');
-    //Project Section Here//
-    //const projectList = projectSection.querySelector('ul');
-    //Add for loop to initiate over repositories//
-    //console.log("I am inside of the loop")
-    //console.log(repositories[index])
-      //for(let index=0; index < repositories.length; index++)
-      //const project=document.createElement('li');
-      //console.log(project);
-      //Set the inner text of the project variable to the array element//
-      //project.innertext=repositories[index].name
-      //Checnage the project element to the project list element//
-    //  projectList.appendChild(project),
-  //}
-  //doAjax()
-
-  
-  
-  
-  
+   
   const BUTTON = {
     edit: 'edit',
     save: 'save',

@@ -258,4 +258,26 @@
     .field--inline {
       width: 15.35rem;
     }
+
+    img {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 5px;
+      width: 150px;
+    }
+    
+    img:hover {
+      box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    }
+
+    .fa-volume-down {
+      color: white;
+      width: 50% !important;
+      height: 50% !important;
+      margin-top: 8%;
+      margin-left: 7.5%;
+      font-size: 1em;
+      background-size: 120%;
+  }
+
   }
