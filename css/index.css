@@ -1,0 +1,114 @@
+body {
+    background-color: black;
+    text-align: center;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+section {
+    ∫ margin: 2rem;
+    padding: 10px;
+
+}
+
+h1 {
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-size: 4rem;
+    font-weight: 25;
+    color: dodgerblue;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace font-weight: bold;
+}
+
+.experience li {
+    text-align: center;
+    border: 0.2px dashed white;
+    border-radius: 100px;
+    margin-top: 5px;
+    padding: 5px;
+    background-color: black;
+    list-style-type: none;
+}
+
+.experience li:hover {
+    background-color: indigo;
+
+}
+
+#skills li {
+    border: 1px solid brown;
+    margin: 1rem;
+    padding: 15px;
+    text-align: center;
+    list-style-type: none;
+    border-radius: 250px;
+    max-width: fit-content;
+}
+
+#skills li:hover {
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+label {
+    background-color: blanchedalmond;
+    color: darkgoldenrod;
+}
+
+input {
+    font-size: 1rem;
+    padding: 10px;
+    border: 10px solid black;
+}
+
+input.focus {
+    border: none;
+}
+
+.button {
+    padding: 25px;
+    margin-top: 18px;
+    background-color: black;
+    color: yellow;
+    font-size: large;
+}
+
+.button:hover {
+    background-color: red;
+    color: white;
+
+}
+
+footer {
+    background-color: white;
+    margin-top: 20px;
+}
+
+img {
+    background-position: 0%;
+    height: 300px;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 10px 2px 2px greenyellow;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+a:visted {
+    color: purple
+}
+
+textarea {
+    color: white;
+    background-color: black;
+}
